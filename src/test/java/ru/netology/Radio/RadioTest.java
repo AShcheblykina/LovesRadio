@@ -31,7 +31,7 @@ public class RadioTest {
     }
 
     @Test
-    public void ChooseStation() {
+    public void RealStation() {
         Radio cond = new Radio();
 
         cond.getStationNumber();
@@ -43,7 +43,7 @@ public class RadioTest {
     }
 
     @Test
-    public void ChangeVolume() {
+    public void RealVolume() {
         Radio cond = new Radio();
 
         cond.getSoundVolume();
@@ -54,4 +54,27 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void ChangeStations() {
+        Radio cond = new Radio();
+
+        cond.setStationNumber(6);
+
+        int expected = 6;
+        int actual = cond.StationNumber;
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void ChangeVolume() {
+        Radio cond = new Radio();
+
+        cond.setSoundVolume(8);
+
+        int expected = 8;
+        int actual = cond.SoundVolume;
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
