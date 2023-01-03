@@ -24,7 +24,7 @@ public class Radio {
         if (SoundVolume < 0) {
             return;
         }
-        if (SoundVolume > 9) {
+        if (SoundVolume > 10) {
             return;
         }
         this.SoundVolume = SoundVolume;

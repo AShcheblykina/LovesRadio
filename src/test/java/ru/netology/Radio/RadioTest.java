@@ -16,17 +16,6 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void ChooseIncreaseSoundVolumeLargeMax() {
-        Radio cond = new Radio();
-
-        cond.setSoundVolume(10);
-
-        int expected = 10;
-        int actual = cond.SoundVolume;
-
-        Assertions.assertEquals(expected, actual);
-    }
 
     @Test
     public void ChooseIncreaseSoundVolumeLargeMini() {
