@@ -16,6 +16,18 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void ChooseIncreaseStationNumberLargeMini() {
+        Radio cond = new Radio();
+
+        cond.setStationNumber(-5);
+
+        int expected = 0;
+        int actual = cond.StationNumber;
+
+        Assertions.assertEquals(expected, actual);
+
+    }
 
     @Test
     public void ChooseIncreaseSoundVolumeLargeMini() {
