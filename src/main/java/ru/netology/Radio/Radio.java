@@ -1,4 +1,5 @@
 package ru.netology.Radio;
+
 public class Radio {
     int StationNumber;
     int SoundVolume;
@@ -20,6 +21,7 @@ public class Radio {
     public int getSoundVolume() {
         return SoundVolume;
     }
+
     public void setSoundVolume(int SoundVolume) {
         if (SoundVolume < 0) {
             return;

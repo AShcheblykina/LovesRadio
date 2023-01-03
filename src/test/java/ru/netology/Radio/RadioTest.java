@@ -29,6 +29,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void ChooseStation() {
         Radio cond = new Radio();
@@ -39,8 +40,9 @@ public class RadioTest {
         int actual = cond.StationNumber;
 
         Assertions.assertEquals(expected, actual);
-}
-@Test
+    }
+
+    @Test
     public void ChangeVolume() {
         Radio cond = new Radio();
 
