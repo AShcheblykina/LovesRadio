@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class Radio {
+public class Radio {
+    private int StationNumber;
+    private int SoundVolume;
 }
