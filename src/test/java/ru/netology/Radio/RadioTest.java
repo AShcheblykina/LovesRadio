@@ -57,7 +57,7 @@ public class RadioTest {
     void ShouldNotChooseLastStationLargerMini() {
         Radio radio = new Radio();
 
-        radio.setStationNumber(0);
+        radio.setStationNumber(-1);
 
         int expected = 0;
         int actual = radio.getStationNumber();
@@ -69,7 +69,7 @@ public class RadioTest {
     public void ShouldNotChooseSoundLargerMini() {
         Radio radio = new Radio();
 
-        radio.setSoundVolume(0);
+        radio.setSoundVolume(-1);
 
         int expected = 0;
         int actual = radio.getSoundVolume();
