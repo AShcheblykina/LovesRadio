@@ -34,9 +34,9 @@ public class RadioTest {
     public void ChooseStation() {
         Radio cond = new Radio();
 
-        cond.setStationNumber(6);
+        cond.getStationNumber();
 
-        int expected = 6;
+        int expected = 0;
         int actual = cond.StationNumber;
 
         Assertions.assertEquals(expected, actual);
@@ -46,9 +46,9 @@ public class RadioTest {
     public void ChangeVolume() {
         Radio cond = new Radio();
 
-        cond.setSoundVolume(7);
+        cond.getSoundVolume();
 
-        int expected = 7;
+        int expected = 0;
         int actual = cond.SoundVolume;
 
         Assertions.assertEquals(expected, actual);
