@@ -45,6 +45,7 @@ public class Radio {
             StationNumber = 0;
         }
     }
+
     public void PrevStation() {
         if (StationNumber != 0) {
             StationNumber++;

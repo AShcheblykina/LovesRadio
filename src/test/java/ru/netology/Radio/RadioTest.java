@@ -155,6 +155,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void FirsStation() {
         Radio radio = new Radio();
@@ -165,8 +166,9 @@ public class RadioTest {
         int expected = 9;
         int actual = radio.getStationNumber();
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void ChooseToStation() {
         Radio radio = new Radio();
@@ -177,7 +179,7 @@ public class RadioTest {
         int expected = 2;
         int actual = radio.getStationNumber();
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 
 }
