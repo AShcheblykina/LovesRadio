@@ -1,66 +1,35 @@
 package ru.netology.Radio;
 
 public class Radio {
-    private int MinNumberStations = 0;
-    private int MaxNumberStation = 9;
-    private int SizeNumberStation = 29;
-    private int StationNumber = MinNumberStations;
-    private int MinSoundVolume = 0;
-    private int MaxSoundVolume = 100;
-    private int SoundVolume = MinSoundVolume;
+    private int sizeNumberStation;
+    private int stationNumber;
+    private int SoundVolume;
 
-    public Radio(int MinNumberStation, int MaxNumberStation) {
-        this.MinNumberStations = MinNumberStation;
-        this.MaxNumberStation = MaxNumberStation;
-        this.StationNumber = MinNumberStation;
-        this.SizeNumberStation = MinNumberStation;
-        this.MinSoundVolume = MinSoundVolume;
-        this.MaxSoundVolume = MaxSoundVolume;
-        this.SoundVolume = MinSoundVolume;
-
+    public Radio() {
+        sizeNumberStation = 25;
     }
 
-    public Radio(int size) {
-        MaxNumberStation = MinNumberStations + size;
-        SizeNumberStation = MinNumberStations + size;
-        MaxSoundVolume = MinSoundVolume + size;
+    public Radio(int stationsCount) {
+        sizeNumberStation = stationsCount -1;
+
     }
 
     public int getStationNumber() {
-        return StationNumber;
-    }
-    public int getSizeNumberStation() {
-        return SizeNumberStation;
+        return stationNumber;
     }
 
-    public int getMinNumberStations() {
-        return MinNumberStations;
-    }
-
-    public int getMaxNumberStation() {
-        return MaxNumberStation;
-    }
-
-    public void setStationNumber(int StationNumber) {
-        if (this.StationNumber < 0) {
+    public void setStationNumber(int stationNumber) {
+        if (stationNumber < 0) {
             return;
         }
-        if (this.StationNumber > 9) {
+        if (stationNumber > sizeNumberStation) {
             return;
         }
-        this.StationNumber = StationNumber;
+       this.stationNumber = stationNumber;
     }
 
     public int getSoundVolume() {
         return SoundVolume;
-    }
-
-    public int getMinSoundVolume() {
-        return MinNumberStations;
-    }
-
-    public int getMaxSoundVolume() {
-        return MaxSoundVolume;
     }
 
     public void setSoundVolume(int SoundVolume) {
@@ -80,18 +49,18 @@ public class Radio {
     }
 
     public void NextStation() {
-        if (StationNumber != 9) {
-            StationNumber++;
+        if (stationNumber != sizeNumberStation) {
+            stationNumber++;
         } else {
-            StationNumber = 0;
+            stationNumber = 0;
         }
     }
 
     public void PrevStation() {
-        if (StationNumber != 0) {
-            StationNumber++;
+        if (stationNumber != 0) {
+            stationNumber++;
         } else {
-            StationNumber = 9;
+            stationNumber = sizeNumberStation;
         }
     }
 }
