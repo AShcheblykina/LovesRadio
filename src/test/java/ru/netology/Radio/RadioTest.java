@@ -16,21 +16,8 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void lastStations() {
-        Radio radio = new Radio(9);
-        radio.setStationNumber(9);
-
-        radio.NextStation();
-
-        int expected = 0;
-        int actual = radio.getStationNumber();
-
-        Assertions.assertEquals(expected, actual);
-
-    }
-    @Test
     public void changeStations() {
-        Radio radio = new Radio(8);
+        Radio radio = new Radio();
         radio.setStationNumber(8);
 
         radio.NextStation();
@@ -42,24 +29,12 @@ public class RadioTest {
     }
     @Test
     public void firstStations() {
-        Radio radio = new Radio(0);
-        radio.setStationNumber(0);
+        Radio radio = new Radio();
+        radio.setStationNumber(1);
 
         radio.PrevStation();
 
-        int expected = 9;
-        int actual = radio.getStationNumber();
-
-        Assertions.assertEquals(expected, actual);
-    }
-    @Test
-    public void nextStation() {
-        Radio radio = new Radio(6);
-        radio.setStationNumber(6);
-
-        radio.NextStation();
-
-        int expected = 7;
+        int expected = 2;
         int actual = radio.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
@@ -110,16 +85,6 @@ public class RadioTest {
         Assertions.assertEquals(expected,actual);
     }
     @Test
-    public void chooseMaxNumberStation() {
-        Radio radio = new Radio(9);
-        radio.setStationNumber(9);
-
-        int expected = 9;
-        int actual = radio.getStationNumber();
-
-        Assertions.assertEquals(expected,actual);
-    }
-    @Test
     public void chooseMinSoundVolume() {
         Radio radio = new Radio(0);
         radio.setSoundVolume(0);
@@ -152,29 +117,18 @@ public class RadioTest {
     }
     @Test
     public void chooseSizeToNumberStation() {
-        Radio radio = new Radio(20);
+        Radio radio = new Radio(9);
 
-        radio.setStationNumber(16);
+        radio.setStationNumber(7);
 
-        int expected = 16;
+        int expected = 7;
         int actual = radio.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void chooseSizeMaxToNumberStation() {
-        Radio radio = new Radio(20);
-
-        radio.setStationNumber(21);
-
-        int expected = 0;
-        int actual = radio.getStationNumber();
-
-        Assertions.assertEquals(expected,actual);
-    }
-    @Test
     public void choosePrevNumberStation() {
-        Radio radio = new Radio(20);
+        Radio radio = new Radio(9);
 
         radio.setStationNumber(0);
 

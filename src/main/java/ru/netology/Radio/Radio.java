@@ -6,7 +6,7 @@ public class Radio {
     private int SoundVolume;
 
     public Radio() {
-        sizeNumberStation = 25;
+        sizeNumberStation = 9;
     }
 
     public Radio(int stationsCount) {
