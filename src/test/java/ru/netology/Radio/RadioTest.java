@@ -100,7 +100,7 @@ public class RadioTest {
     }
     @Test
     public void chooseMinNumberStation() {
-        Radio radio = new Radio(0);
+        Radio radio = new Radio(0,9);
         radio.setStationNumber(0);
 
         int expected = 0;
@@ -110,7 +110,7 @@ public class RadioTest {
     }
     @Test
     public void chooseMaxNumberStation() {
-        Radio radio = new Radio(9);
+        Radio radio = new Radio(0,9);
         radio.setStationNumber(9);
 
         int expected = 9;
@@ -120,7 +120,7 @@ public class RadioTest {
     }
     @Test
     public void chooseMinSoundVolume() {
-        Radio radio = new Radio(0);
+        Radio radio = new Radio(0,100);
         radio.setSoundVolume(0);
 
         int expected = 0;
@@ -130,7 +130,7 @@ public class RadioTest {
     }
     @Test
     public void chooseMaxSoundVolume() {
-        Radio radio = new Radio(100);
+        Radio radio = new Radio(0,100);
         radio.setSoundVolume(100);
 
         int expected = 100;
