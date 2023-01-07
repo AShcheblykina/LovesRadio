@@ -16,17 +16,17 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
-    public void realToStation() {
+    public void nextStation() {
         Radio radio = new Radio();
+        radio.setStationNumber(5);
 
-        radio.setStationNumber(6);
+        radio.nextStation();
 
         int expected = 6;
         int actual = radio.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
-
     @Test
     public void changeStations() {
         Radio radio = new Radio();
@@ -50,6 +50,19 @@ public class RadioTest {
         int actual = radio.getStationNumber();
 
         Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void ChooseLastToStation() {
+        Radio radio = new Radio();
+        radio.setStationNumber(9);
+
+        radio.nextStation();
+
+        int expected = 0;
+        int actual = radio.getStationNumber();
+
+        Assertions.assertEquals(expected, actual);
+
     }
     @Test
     public void firstStations() {
@@ -109,7 +122,6 @@ public class RadioTest {
 
         radio.prevStation();
 
-
         int expected = 0;
         int actual = radio.getSoundVolume();
 
@@ -130,8 +142,8 @@ public class RadioTest {
 
     @Test
     public void chooseMinSoundVolume() {
-        Radio radio = new Radio(0);
-        radio.setSoundVolume(0);
+        Radio radio = new Radio(-0);
+        radio.setSoundVolume(-0);
 
         int expected = 0;
         int actual = radio.getStationNumber();
