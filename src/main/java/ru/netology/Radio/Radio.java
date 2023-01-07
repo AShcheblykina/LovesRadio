@@ -42,13 +42,13 @@ public class Radio {
         this.SoundVolume = SoundVolume;
     }
 
-    public void InCreaseVolume() {
+    public void inCreaseVolume() {
         if (SoundVolume < 100) {
             SoundVolume = SoundVolume + 1;
         }
     }
 
-    public void NextStation() {
+    public void nextStation() {
         if (stationNumber != sizeNumberStation) {
             stationNumber++;
         } else {
@@ -56,7 +56,7 @@ public class Radio {
         }
     }
 
-    public void PrevStation() {
+    public void prevStation() {
         if (stationNumber != 0) {
             stationNumber++;
         } else {

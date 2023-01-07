@@ -15,12 +15,13 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void changeStations() {
         Radio radio = new Radio();
         radio.setStationNumber(8);
 
-        radio.NextStation();
+        radio.nextStation();
 
         int expected = 9;
         int actual = radio.getStationNumber();
@@ -32,7 +33,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setStationNumber(1);
 
-        radio.PrevStation();
+        radio.prevStation();
 
         int expected = 2;
         int actual = radio.getStationNumber();
@@ -40,33 +41,50 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
     @Test
+    public void lastToStations() {
+        Radio radio = new Radio();
+        radio.setStationNumber(0);
+
+        radio.prevStation();
+
+        int expected = 9;
+        int actual = radio.getStationNumber();
+
+        Assertions.assertEquals(expected, actual);
+}
+
+    @Test
     public void chooseNextSoundVolume() {
-        Radio radio = new Radio(52);
-        radio.setSoundVolume(52);
+        Radio radio = new Radio();
+        radio.setSoundVolume(0);
 
-        radio.InCreaseVolume();
+        radio.inCreaseVolume();
 
-        int expected = 53;
+        int expected = 1;
         int actual = radio.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void aboveMaxSoundVolume() {
         Radio radio = new Radio(100);
         radio.setSoundVolume(100);
 
-        radio.InCreaseVolume();
+        radio.inCreaseVolume();
 
         int expected = 100;
         int actual = radio.getSoundVolume();
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void aboveMinSoundVolume() {
         Radio radio = new Radio(-0);
         radio.setSoundVolume(-0);
+
+        radio.prevStation();
 
 
         int expected = 0;
@@ -74,16 +92,19 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void chooseMinNumberStation() {
         Radio radio = new Radio(9);
         radio.setStationNumber(9);
 
+
         int expected = 0;
         int actual = radio.getStationNumber();
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void chooseMinSoundVolume() {
         Radio radio = new Radio(0);
@@ -92,18 +113,34 @@ public class RadioTest {
         int expected = 0;
         int actual = radio.getStationNumber();
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void chooseMaxSoundVolume() {
-        Radio radio = new Radio(100);
+        Radio radio = new Radio();
         radio.setSoundVolume(100);
 
         int expected = 100;
         int actual = radio.getSoundVolume();
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void chooseNextToSoundVolume() {
+        Radio radio = new Radio();
+        radio.setSoundVolume(99);
+
+        radio.inCreaseVolume();
+
+        int expected = 100;
+        int actual = radio.getSoundVolume();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+
     @Test
     public void realSoundVolume() {
         Radio radio = new Radio();
@@ -115,6 +152,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void chooseSizeToNumberStation() {
         Radio radio = new Radio(9);
@@ -126,6 +164,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void choosePrevNumberStation() {
         Radio radio = new Radio(9);
@@ -135,7 +174,7 @@ public class RadioTest {
         int expected = 0;
         int actual = radio.getStationNumber();
 
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertEquals(expected, actual);
     }
 }
 
