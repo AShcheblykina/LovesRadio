@@ -15,6 +15,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void nextStation() {
         Radio radio = new Radio();
@@ -27,6 +28,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void changeStations() {
         Radio radio = new Radio();
@@ -39,6 +41,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void changeToStations() {
         Radio radio = new Radio();
@@ -51,6 +54,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void ChooseLastToStation() {
         Radio radio = new Radio();
@@ -64,6 +68,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void firstStations() {
         Radio radio = new Radio();
@@ -235,6 +240,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     void ShouldNotChooseLastStationLargerMax() {
         Radio radio = new Radio(10);

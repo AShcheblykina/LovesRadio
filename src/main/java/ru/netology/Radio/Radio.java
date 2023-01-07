@@ -10,7 +10,7 @@ public class Radio {
     }
 
     public Radio(int stationsCount) {
-        sizeNumberStation = stationsCount -1;
+        sizeNumberStation = stationsCount - 1;
 
     }
 
@@ -25,7 +25,7 @@ public class Radio {
         if (stationNumber > sizeNumberStation) {
             return;
         }
-       this.stationNumber = stationNumber;
+        this.stationNumber = stationNumber;
     }
 
     public int getSoundVolume() {
