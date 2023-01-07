@@ -1,56 +1,66 @@
 package ru.netology.Radio;
 
 public class Radio {
-    private int StationNumber;
-    private int SoundVolume;
+    private int sizeNumberStation;
+    private int stationNumber;
+    private int soundVolume;
 
-    public int getStationNumber() {
-        return StationNumber;
+    public Radio() {
+        sizeNumberStation = 9;
     }
 
-    public void setStationNumber(int StationNumber) {
-        if (StationNumber < 0) {
+    public Radio(int stationsCount) {
+        sizeNumberStation = stationsCount - 1;
+
+    }
+
+    public int getStationNumber() {
+        return stationNumber;
+    }
+
+    public void setStationNumber(int stationNumber) {
+        if (stationNumber < 0) {
             return;
         }
-        if (StationNumber > 9) {
+        if (stationNumber > sizeNumberStation) {
             return;
         }
-        this.StationNumber = StationNumber;
+        this.stationNumber = stationNumber;
     }
 
     public int getSoundVolume() {
-        return SoundVolume;
+        return soundVolume;
     }
 
-    public void setSoundVolume(int SoundVolume) {
-        if (SoundVolume < 0) {
+    public void setSoundVolume(int soundVolume) {
+        if (soundVolume < 0) {
             return;
         }
-        if (SoundVolume > 10) {
+        if (soundVolume > 100) {
             return;
         }
-        this.SoundVolume = SoundVolume;
+        this.soundVolume = soundVolume;
     }
 
-    public void InCreaseVolume() {
-        if (SoundVolume < 10) {
-            SoundVolume = SoundVolume + 1;
+    public void inCreaseVolume() {
+        if (soundVolume < 100) {
+            this.soundVolume = soundVolume + 1;
         }
     }
 
-    public void NextStation() {
-        if (StationNumber != 9) {
-            StationNumber++;
+    public void nextStation() {
+        if (stationNumber != sizeNumberStation) {
+            stationNumber++;
         } else {
-            StationNumber = 0;
+            this.stationNumber = 0;
         }
     }
 
-    public void PrevStation() {
-        if (StationNumber != 0) {
-            StationNumber++;
+    public void prevStation() {
+        if (stationNumber != 0) {
+            stationNumber++;
         } else {
-            StationNumber = 9;
+            this.stationNumber = sizeNumberStation;
         }
     }
 }
