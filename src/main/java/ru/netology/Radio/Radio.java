@@ -3,7 +3,7 @@ package ru.netology.Radio;
 public class Radio {
     private int sizeNumberStation;
     private int stationNumber;
-    private int SoundVolume;
+    private int soundVolume;
 
     public Radio() {
         sizeNumberStation = 9;
@@ -29,22 +29,22 @@ public class Radio {
     }
 
     public int getSoundVolume() {
-        return SoundVolume;
+        return soundVolume;
     }
 
-    public void setSoundVolume(int SoundVolume) {
-        if (this.SoundVolume < 0) {
+    public void setSoundVolume(int soundVolume) {
+        if (soundVolume < 0) {
             return;
         }
-        if (this.SoundVolume > 100) {
+        if (soundVolume > 100) {
             return;
         }
-        this.SoundVolume = SoundVolume;
+        this.soundVolume = soundVolume;
     }
 
     public void inCreaseVolume() {
-        if (SoundVolume < 100) {
-            SoundVolume = SoundVolume + 1;
+        if (soundVolume < 100) {
+            this.soundVolume = soundVolume + 1;
         }
     }
 
@@ -52,7 +52,7 @@ public class Radio {
         if (stationNumber != sizeNumberStation) {
             stationNumber++;
         } else {
-            stationNumber = 0;
+            this.stationNumber = 0;
         }
     }
 
@@ -60,7 +60,7 @@ public class Radio {
         if (stationNumber != 0) {
             stationNumber++;
         } else {
-            stationNumber = sizeNumberStation;
+            this.stationNumber = sizeNumberStation;
         }
     }
 }
