@@ -3,6 +3,7 @@ package ru.netology.Radio;
 public class Radio {
     private int MinNumberStations = 0;
     private int MaxNumberStation = 9;
+    private int SizeNumberStation = 29;
     private int StationNumber = MinNumberStations;
     private int MinSoundVolume = 0;
     private int MaxSoundVolume = 100;
@@ -12,6 +13,7 @@ public class Radio {
         this.MinNumberStations = MinNumberStation;
         this.MaxNumberStation = MaxNumberStation;
         this.StationNumber = MinNumberStation;
+        this.SizeNumberStation = MinNumberStation;
         this.MinSoundVolume = MinSoundVolume;
         this.MaxSoundVolume = MaxSoundVolume;
         this.SoundVolume = MinSoundVolume;
@@ -20,11 +22,15 @@ public class Radio {
 
     public Radio(int size) {
         MaxNumberStation = MinNumberStations + size;
+        SizeNumberStation = MinNumberStations + size;
         MaxSoundVolume = MinSoundVolume + size;
     }
 
     public int getStationNumber() {
         return StationNumber;
+    }
+    public int getSizeNumberStation() {
+        return SizeNumberStation;
     }
 
     public int getMinNumberStations() {

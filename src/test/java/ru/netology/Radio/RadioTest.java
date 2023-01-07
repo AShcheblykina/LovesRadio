@@ -77,7 +77,7 @@ public class RadioTest {
     }
     @Test
     public void aboveMaxSoundVolume() {
-        Radio radio = new Radio(100);
+        Radio radio = new Radio(0,100);
         radio.setSoundVolume(100);
 
         radio.InCreaseVolume();
@@ -146,6 +146,14 @@ public class RadioTest {
         Assertions.assertEquals(100, cond.getMaxSoundVolume());
         Assertions.assertEquals(0, cond.getSoundVolume());
 
+    }
+    @Test
+    public void chooseSizeNumberStation() {
+        Radio cond = new Radio(9,18);
+
+        Assertions.assertEquals(9,cond.getMinNumberStations());
+        Assertions.assertEquals(18,cond.getMaxNumberStation());
+        Assertions.assertEquals(9,cond.getSizeNumberStation());
     }
 
 }
